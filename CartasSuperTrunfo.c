@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das cartas
@@ -15,6 +15,8 @@ int main() {
     float area1;
     float PIB1;
     int qtd_pontos_turisticos1;
+    float Desndidade_Populaciona1;
+    double PIB_per_Capita1;
 
     // Variaveis criadas para armazena dados da carta 2
     char UF2;
@@ -24,6 +26,8 @@ int main() {
     float area2;
     float PIB2;
     int qtd_pontos_turisticos2;
+    float Desndidade_Populaciona2;
+    double PIB_per_Capita2;
 
   // Área para entrada de dados
 
@@ -94,6 +98,15 @@ int main() {
     printf("PIB: %.2f bilhões de reais\n", PIB1);
     printf("Número de Pontos Turísticos: %d\n", qtd_pontos_turisticos1);
 
+    // Realizando o caculo da Densidade populacional CARTA 1
+    Desndidade_Populaciona1 = (float) populacao1 /  area1;
+
+    // Realizando o caculo do PIB per Capita CARTA 1
+    PIB_per_Capita1 = (double) (PIB1 * 1000000000) / populacao1;
+
+    printf("Densidade Populaciona: %.2f hab\km²\n", Desndidade_Populaciona1);
+    printf("PIB per Capita: %.2f reais\n", PIB_per_Capita1);
+
     printf("===========================\n");
 
     printf("CARTA 2\n");
@@ -105,5 +118,14 @@ int main() {
     printf("PIB: %.2f bilhões de reais\n", PIB2);
     printf("Número de Pontos Turísticos: %d\n", qtd_pontos_turisticos2);
 
+    // Realizando o caculo da Densidade populacional CARTA 2
+    Desndidade_Populaciona2 = (float)populacao2 /  area2;
+
+    // Realizando o caculo do PIB per Capita CARTA 2
+    PIB_per_Capita2 = (double) (PIB2 * 1000000000) / populacao2;
+
+    printf("Densidade Populaciona: %.2f hab\km²\n", Desndidade_Populaciona2);
+    printf("PIB per Capita: %.2f reais\n", PIB_per_Capita2);
+
 return 0;
-} 
+}
